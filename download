@@ -1,0 +1,77 @@
+# EcoFeed .env Configuration
+
+# === MongoDB Configuration ===
+MONGODB_URI=mongodb://localhost:27017/ecofeed
+# For MongoDB Atlas: mongodb+srv://username:password@cluster.mongodb.net/ecofeed
+
+# === JWT Configuration ===
+JWT_SECRET=your_super_secret_jwt_key_min_32_characters_long
+JWT_EXPIRE=7d
+
+# === Server Configuration ===
+PORT=8080
+NODE_ENV=development
+# Set to 'production' for production deployment
+
+# === Frontend Configuration ===
+FRONTEND_URL=http://localhost:3000
+# For production: https://yourdomain.com
+
+# === Email Configuration (Nodemailer) ===
+SMTP_HOST=smtp.gmail.com
+SMTP_PORT=587
+SMTP_USER=your_email@gmail.com
+SMTP_PASSWORD=your_app_specific_password
+# Note: For Gmail, generate App Password (not regular password)
+# Instructions: https://support.google.com/accounts/answer/185833
+
+# === API Configuration ===
+API_RATE_LIMIT=100
+# Max requests per 15 minutes per IP
+
+# === File Upload ===
+MAX_FILE_SIZE=5242880
+# In bytes (5MB default)
+
+# === Logging ===
+LOG_LEVEL=info
+# Options: debug, info, warn, error
+
+# === Admin Configuration ===
+ADMIN_EMAIL=admin@ecofeed.com
+ADMIN_PASSWORD=change_this_in_production
+
+# === Optional: AWS S3 (for file storage) ===
+# AWS_ACCESS_KEY_ID=your_key
+# AWS_SECRET_ACCESS_KEY=your_secret
+# AWS_S3_BUCKET=ecofeed-bucket
+# AWS_REGION=us-east-1
+
+# === Optional: Twilio (for SMS) ===
+# TWILIO_ACCOUNT_SID=your_sid
+# TWILIO_AUTH_TOKEN=your_token
+# TWILIO_PHONE_NUMBER=+1234567890
+
+# === Optional: Google Maps API ===
+# GOOGLE_MAPS_API_KEY=your_key
+
+# === Optional: Sentry (error tracking) ===
+# SENTRY_DSN=your_sentry_url
+
+# === Cache Configuration (Redis) ===
+# REDIS_URL=redis://localhost:6379
+# Uncomment when using Redis for caching
+
+# === CORS Configuration ===
+CORS_ORIGIN=http://localhost:3000
+# For production: https://yourdomain.com
+
+# === SSL Configuration ===
+# SSL_CERT_PATH=/path/to/cert.pem
+# SSL_KEY_PATH=/path/to/key.pem
+# Uncomment for HTTPS
+
+# === Database Backup ===
+# DB_BACKUP_URL=s3://bucket/backups
+# BACKUP_SCHEDULE=0 2 * * *
+# Cron schedule for automated backups
